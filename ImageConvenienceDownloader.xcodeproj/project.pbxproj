@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AAF33D0A2AC6AFEA949BC33 /* libPods-ImageConvenienceDownloader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F6BBF32AF8A168FC97940C /* libPods-ImageConvenienceDownloader.a */; };
 		EA29F5AD22E93810008C9F04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5AC22E93810008C9F04 /* AppDelegate.m */; };
 		EA29F5B022E93810008C9F04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5AF22E93810008C9F04 /* ViewController.m */; };
 		EA29F5B322E93810008C9F04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5B122E93810008C9F04 /* Main.storyboard */; };
 		EA29F5B522E93812008C9F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5B422E93812008C9F04 /* Assets.xcassets */; };
-		EA29F5B822E93812008C9F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5B622E93812008C9F04 /* LaunchScreen.storyboard */; };
 		EA29F5BB22E93812008C9F04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5BA22E93812008C9F04 /* main.m */; };
 		EA29F5C522E93812008C9F04 /* ImageConvenienceDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5C422E93812008C9F04 /* ImageConvenienceDownloaderTests.m */; };
 		EA29F5D022E93812008C9F04 /* ImageConvenienceDownloaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5CF22E93812008C9F04 /* ImageConvenienceDownloaderUITests.m */; };
+		EA29F5E222E938CD008C9F04 /* JMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5E022E938CD008C9F04 /* JMNavigationController.m */; };
+		EA29F5E322E938CD008C9F04 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5E122E938CD008C9F04 /* MainTableViewController.m */; };
+		EA29F5E522E93970008C9F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5E422E93970008C9F04 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19E5B1E1385775124C6D3496 /* Pods-ImageConvenienceDownloader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageConvenienceDownloader.debug.xcconfig"; path = "Target Support Files/Pods-ImageConvenienceDownloader/Pods-ImageConvenienceDownloader.debug.xcconfig"; sourceTree = "<group>"; };
+		55F6BBF32AF8A168FC97940C /* libPods-ImageConvenienceDownloader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageConvenienceDownloader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA29F5A822E93810008C9F04 /* ImageConvenienceDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageConvenienceDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA29F5AB22E93810008C9F04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA29F5AC22E93810008C9F04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,7 +47,6 @@
 		EA29F5AF22E93810008C9F04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EA29F5B222E93810008C9F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA29F5B422E93812008C9F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EA29F5B722E93812008C9F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA29F5B922E93812008C9F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA29F5BA22E93812008C9F04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA29F5C022E93812008C9F04 /* ImageConvenienceDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageConvenienceDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +55,13 @@
 		EA29F5CB22E93812008C9F04 /* ImageConvenienceDownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageConvenienceDownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA29F5CF22E93812008C9F04 /* ImageConvenienceDownloaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageConvenienceDownloaderUITests.m; sourceTree = "<group>"; };
 		EA29F5D122E93812008C9F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA29F5DE22E938CD008C9F04 /* JMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMNavigationController.h; sourceTree = "<group>"; };
+		EA29F5DF22E938CD008C9F04 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		EA29F5E022E938CD008C9F04 /* JMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMNavigationController.m; sourceTree = "<group>"; };
+		EA29F5E122E938CD008C9F04 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		EA29F5E422E93970008C9F04 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA29F5E622E9398D008C9F04 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EC2456EECA2436D7F82DB1FE /* Pods-ImageConvenienceDownloader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageConvenienceDownloader.release.xcconfig"; path = "Target Support Files/Pods-ImageConvenienceDownloader/Pods-ImageConvenienceDownloader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AAF33D0A2AC6AFEA949BC33 /* libPods-ImageConvenienceDownloader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +90,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106A992179930BC1AB3687D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55F6BBF32AF8A168FC97940C /* libPods-ImageConvenienceDownloader.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4AC0B3539B41B730211C5FEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19E5B1E1385775124C6D3496 /* Pods-ImageConvenienceDownloader.debug.xcconfig */,
+				EC2456EECA2436D7F82DB1FE /* Pods-ImageConvenienceDownloader.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EA29F59F22E93810008C9F04 = {
 			isa = PBXGroup;
 			children = (
+				EA29F5DD22E938CD008C9F04 /* Base */,
 				EA29F5AA22E93810008C9F04 /* ImageConvenienceDownloader */,
 				EA29F5C322E93812008C9F04 /* ImageConvenienceDownloaderTests */,
 				EA29F5CE22E93812008C9F04 /* ImageConvenienceDownloaderUITests */,
 				EA29F5A922E93810008C9F04 /* Products */,
+				4AC0B3539B41B730211C5FEB /* Pods */,
+				106A992179930BC1AB3687D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,9 +139,10 @@
 				EA29F5AF22E93810008C9F04 /* ViewController.m */,
 				EA29F5B122E93810008C9F04 /* Main.storyboard */,
 				EA29F5B422E93812008C9F04 /* Assets.xcassets */,
-				EA29F5B622E93812008C9F04 /* LaunchScreen.storyboard */,
+				EA29F5E422E93970008C9F04 /* LaunchScreen.storyboard */,
 				EA29F5B922E93812008C9F04 /* Info.plist */,
 				EA29F5BA22E93812008C9F04 /* main.m */,
+				EA29F5E622E9398D008C9F04 /* PrefixHeader.pch */,
 			);
 			path = ImageConvenienceDownloader;
 			sourceTree = "<group>";
@@ -132,6 +165,17 @@
 			path = ImageConvenienceDownloaderUITests;
 			sourceTree = "<group>";
 		};
+		EA29F5DD22E938CD008C9F04 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EA29F5DE22E938CD008C9F04 /* JMNavigationController.h */,
+				EA29F5E022E938CD008C9F04 /* JMNavigationController.m */,
+				EA29F5DF22E938CD008C9F04 /* MainTableViewController.h */,
+				EA29F5E122E938CD008C9F04 /* MainTableViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +183,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA29F5D422E93812008C9F04 /* Build configuration list for PBXNativeTarget "ImageConvenienceDownloader" */;
 			buildPhases = (
+				965410A8360D42A833C036E7 /* [CP] Check Pods Manifest.lock */,
 				EA29F5A422E93810008C9F04 /* Sources */,
 				EA29F5A522E93810008C9F04 /* Frameworks */,
 				EA29F5A622E93810008C9F04 /* Resources */,
@@ -235,7 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA29F5B822E93812008C9F04 /* LaunchScreen.storyboard in Resources */,
+				EA29F5E522E93970008C9F04 /* LaunchScreen.storyboard in Resources */,
 				EA29F5B522E93812008C9F04 /* Assets.xcassets in Resources */,
 				EA29F5B322E93810008C9F04 /* Main.storyboard in Resources */,
 			);
@@ -257,6 +302,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		965410A8360D42A833C036E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageConvenienceDownloader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA29F5A422E93810008C9F04 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +334,8 @@
 			files = (
 				EA29F5B022E93810008C9F04 /* ViewController.m in Sources */,
 				EA29F5BB22E93812008C9F04 /* main.m in Sources */,
+				EA29F5E222E938CD008C9F04 /* JMNavigationController.m in Sources */,
+				EA29F5E322E938CD008C9F04 /* MainTableViewController.m in Sources */,
 				EA29F5AD22E93810008C9F04 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,14 +378,6 @@
 				EA29F5B222E93810008C9F04 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EA29F5B622E93812008C9F04 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA29F5B722E93812008C9F04 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -433,10 +497,13 @@
 		};
 		EA29F5D522E93812008C9F04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19E5B1E1385775124C6D3496 /* Pods-ImageConvenienceDownloader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U3KSMQZZR5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ImageConvenienceDownloader/PrefixHeader.pch";
 				INFOPLIST_FILE = ImageConvenienceDownloader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,10 +517,13 @@
 		};
 		EA29F5D622E93812008C9F04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC2456EECA2436D7F82DB1FE /* Pods-ImageConvenienceDownloader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U3KSMQZZR5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ImageConvenienceDownloader/PrefixHeader.pch";
 				INFOPLIST_FILE = ImageConvenienceDownloader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
