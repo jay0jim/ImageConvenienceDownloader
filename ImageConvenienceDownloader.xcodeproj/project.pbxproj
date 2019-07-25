@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA29F5AD22E93810008C9F04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5AC22E93810008C9F04 /* AppDelegate.m */; };
+		EA29F5B022E93810008C9F04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5AF22E93810008C9F04 /* ViewController.m */; };
+		EA29F5B322E93810008C9F04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5B122E93810008C9F04 /* Main.storyboard */; };
+		EA29F5B522E93812008C9F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5B422E93812008C9F04 /* Assets.xcassets */; };
+		EA29F5B822E93812008C9F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5B622E93812008C9F04 /* LaunchScreen.storyboard */; };
+		EA29F5BB22E93812008C9F04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5BA22E93812008C9F04 /* main.m */; };
+		EA29F5C522E93812008C9F04 /* ImageConvenienceDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5C422E93812008C9F04 /* ImageConvenienceDownloaderTests.m */; };
+		EA29F5D022E93812008C9F04 /* ImageConvenienceDownloaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5CF22E93812008C9F04 /* ImageConvenienceDownloaderUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA29F5C122E93812008C9F04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA29F5A022E93810008C9F04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA29F5A722E93810008C9F04;
+			remoteInfo = ImageConvenienceDownloader;
+		};
+		EA29F5CC22E93812008C9F04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA29F5A022E93810008C9F04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA29F5A722E93810008C9F04;
+			remoteInfo = ImageConvenienceDownloader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA29F5A822E93810008C9F04 /* ImageConvenienceDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageConvenienceDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA29F5AB22E93810008C9F04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA29F5AC22E93810008C9F04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA29F5AE22E93810008C9F04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA29F5AF22E93810008C9F04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA29F5B222E93810008C9F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA29F5B422E93812008C9F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA29F5B722E93812008C9F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA29F5B922E93812008C9F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA29F5BA22E93812008C9F04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA29F5C022E93812008C9F04 /* ImageConvenienceDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageConvenienceDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA29F5C422E93812008C9F04 /* ImageConvenienceDownloaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageConvenienceDownloaderTests.m; sourceTree = "<group>"; };
+		EA29F5C622E93812008C9F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA29F5CB22E93812008C9F04 /* ImageConvenienceDownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageConvenienceDownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA29F5CF22E93812008C9F04 /* ImageConvenienceDownloaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageConvenienceDownloaderUITests.m; sourceTree = "<group>"; };
+		EA29F5D122E93812008C9F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA29F5A522E93810008C9F04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA29F5BD22E93812008C9F04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA29F5C822E93812008C9F04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA29F59F22E93810008C9F04 = {
+			isa = PBXGroup;
+			children = (
+				EA29F5AA22E93810008C9F04 /* ImageConvenienceDownloader */,
+				EA29F5C322E93812008C9F04 /* ImageConvenienceDownloaderTests */,
+				EA29F5CE22E93812008C9F04 /* ImageConvenienceDownloaderUITests */,
+				EA29F5A922E93810008C9F04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA29F5A922E93810008C9F04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA29F5A822E93810008C9F04 /* ImageConvenienceDownloader.app */,
+				EA29F5C022E93812008C9F04 /* ImageConvenienceDownloaderTests.xctest */,
+				EA29F5CB22E93812008C9F04 /* ImageConvenienceDownloaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA29F5AA22E93810008C9F04 /* ImageConvenienceDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				EA29F5AB22E93810008C9F04 /* AppDelegate.h */,
+				EA29F5AC22E93810008C9F04 /* AppDelegate.m */,
+				EA29F5AE22E93810008C9F04 /* ViewController.h */,
+				EA29F5AF22E93810008C9F04 /* ViewController.m */,
+				EA29F5B122E93810008C9F04 /* Main.storyboard */,
+				EA29F5B422E93812008C9F04 /* Assets.xcassets */,
+				EA29F5B622E93812008C9F04 /* LaunchScreen.storyboard */,
+				EA29F5B922E93812008C9F04 /* Info.plist */,
+				EA29F5BA22E93812008C9F04 /* main.m */,
+			);
+			path = ImageConvenienceDownloader;
+			sourceTree = "<group>";
+		};
+		EA29F5C322E93812008C9F04 /* ImageConvenienceDownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA29F5C422E93812008C9F04 /* ImageConvenienceDownloaderTests.m */,
+				EA29F5C622E93812008C9F04 /* Info.plist */,
+			);
+			path = ImageConvenienceDownloaderTests;
+			sourceTree = "<group>";
+		};
+		EA29F5CE22E93812008C9F04 /* ImageConvenienceDownloaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA29F5CF22E93812008C9F04 /* ImageConvenienceDownloaderUITests.m */,
+				EA29F5D122E93812008C9F04 /* Info.plist */,
+			);
+			path = ImageConvenienceDownloaderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA29F5A722E93810008C9F04 /* ImageConvenienceDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA29F5D422E93812008C9F04 /* Build configuration list for PBXNativeTarget "ImageConvenienceDownloader" */;
+			buildPhases = (
+				EA29F5A422E93810008C9F04 /* Sources */,
+				EA29F5A522E93810008C9F04 /* Frameworks */,
+				EA29F5A622E93810008C9F04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageConvenienceDownloader;
+			productName = ImageConvenienceDownloader;
+			productReference = EA29F5A822E93810008C9F04 /* ImageConvenienceDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA29F5BF22E93812008C9F04 /* ImageConvenienceDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA29F5D722E93812008C9F04 /* Build configuration list for PBXNativeTarget "ImageConvenienceDownloaderTests" */;
+			buildPhases = (
+				EA29F5BC22E93812008C9F04 /* Sources */,
+				EA29F5BD22E93812008C9F04 /* Frameworks */,
+				EA29F5BE22E93812008C9F04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA29F5C222E93812008C9F04 /* PBXTargetDependency */,
+			);
+			name = ImageConvenienceDownloaderTests;
+			productName = ImageConvenienceDownloaderTests;
+			productReference = EA29F5C022E93812008C9F04 /* ImageConvenienceDownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA29F5CA22E93812008C9F04 /* ImageConvenienceDownloaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA29F5DA22E93812008C9F04 /* Build configuration list for PBXNativeTarget "ImageConvenienceDownloaderUITests" */;
+			buildPhases = (
+				EA29F5C722E93812008C9F04 /* Sources */,
+				EA29F5C822E93812008C9F04 /* Frameworks */,
+				EA29F5C922E93812008C9F04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA29F5CD22E93812008C9F04 /* PBXTargetDependency */,
+			);
+			name = ImageConvenienceDownloaderUITests;
+			productName = ImageConvenienceDownloaderUITests;
+			productReference = EA29F5CB22E93812008C9F04 /* ImageConvenienceDownloaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA29F5A022E93810008C9F04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Tony;
+				TargetAttributes = {
+					EA29F5A722E93810008C9F04 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					EA29F5BF22E93812008C9F04 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = EA29F5A722E93810008C9F04;
+					};
+					EA29F5CA22E93812008C9F04 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = EA29F5A722E93810008C9F04;
+					};
+				};
+			};
+			buildConfigurationList = EA29F5A322E93810008C9F04 /* Build configuration list for PBXProject "ImageConvenienceDownloader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA29F59F22E93810008C9F04;
+			productRefGroup = EA29F5A922E93810008C9F04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA29F5A722E93810008C9F04 /* ImageConvenienceDownloader */,
+				EA29F5BF22E93812008C9F04 /* ImageConvenienceDownloaderTests */,
+				EA29F5CA22E93812008C9F04 /* ImageConvenienceDownloaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA29F5A622E93810008C9F04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA29F5B822E93812008C9F04 /* LaunchScreen.storyboard in Resources */,
+				EA29F5B522E93812008C9F04 /* Assets.xcassets in Resources */,
+				EA29F5B322E93810008C9F04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA29F5BE22E93812008C9F04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA29F5C922E93812008C9F04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA29F5A422E93810008C9F04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA29F5B022E93810008C9F04 /* ViewController.m in Sources */,
+				EA29F5BB22E93812008C9F04 /* main.m in Sources */,
+				EA29F5AD22E93810008C9F04 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA29F5BC22E93812008C9F04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA29F5C522E93812008C9F04 /* ImageConvenienceDownloaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA29F5C722E93812008C9F04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA29F5D022E93812008C9F04 /* ImageConvenienceDownloaderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA29F5C222E93812008C9F04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA29F5A722E93810008C9F04 /* ImageConvenienceDownloader */;
+			targetProxy = EA29F5C122E93812008C9F04 /* PBXContainerItemProxy */;
+		};
+		EA29F5CD22E93812008C9F04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA29F5A722E93810008C9F04 /* ImageConvenienceDownloader */;
+			targetProxy = EA29F5CC22E93812008C9F04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA29F5B122E93810008C9F04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA29F5B222E93810008C9F04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA29F5B622E93812008C9F04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA29F5B722E93812008C9F04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA29F5D222E93812008C9F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA29F5D322E93812008C9F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA29F5D522E93812008C9F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3KSMQZZR5;
+				INFOPLIST_FILE = ImageConvenienceDownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tony.ImageConvenienceDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA29F5D622E93812008C9F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3KSMQZZR5;
+				INFOPLIST_FILE = ImageConvenienceDownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tony.ImageConvenienceDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA29F5D822E93812008C9F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3KSMQZZR5;
+				INFOPLIST_FILE = ImageConvenienceDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tony.ImageConvenienceDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageConvenienceDownloader.app/ImageConvenienceDownloader";
+			};
+			name = Debug;
+		};
+		EA29F5D922E93812008C9F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3KSMQZZR5;
+				INFOPLIST_FILE = ImageConvenienceDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tony.ImageConvenienceDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageConvenienceDownloader.app/ImageConvenienceDownloader";
+			};
+			name = Release;
+		};
+		EA29F5DB22E93812008C9F04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3KSMQZZR5;
+				INFOPLIST_FILE = ImageConvenienceDownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tony.ImageConvenienceDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageConvenienceDownloader;
+			};
+			name = Debug;
+		};
+		EA29F5DC22E93812008C9F04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3KSMQZZR5;
+				INFOPLIST_FILE = ImageConvenienceDownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tony.ImageConvenienceDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageConvenienceDownloader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA29F5A322E93810008C9F04 /* Build configuration list for PBXProject "ImageConvenienceDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA29F5D222E93812008C9F04 /* Debug */,
+				EA29F5D322E93812008C9F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA29F5D422E93812008C9F04 /* Build configuration list for PBXNativeTarget "ImageConvenienceDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA29F5D522E93812008C9F04 /* Debug */,
+				EA29F5D622E93812008C9F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA29F5D722E93812008C9F04 /* Build configuration list for PBXNativeTarget "ImageConvenienceDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA29F5D822E93812008C9F04 /* Debug */,
+				EA29F5D922E93812008C9F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA29F5DA22E93812008C9F04 /* Build configuration list for PBXNativeTarget "ImageConvenienceDownloaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA29F5DB22E93812008C9F04 /* Debug */,
+				EA29F5DC22E93812008C9F04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA29F5A022E93810008C9F04 /* Project object */;
+}
