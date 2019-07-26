@@ -27,6 +27,7 @@
     
     self.catagoryArray = @[@"RunLoop", @"GCD", @"JS"];
     
+    // test
     [self test];
     
 }
