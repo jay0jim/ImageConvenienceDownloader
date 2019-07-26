@@ -27,18 +27,36 @@
     
     self.catagoryArray = @[@"RunLoop", @"GCD", @"JS"];
     
-//    //获取沙盒路径
-//    NSArray *paths  = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-//    //获取文件路径
-//    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"testLogs.txt"];
-////    NSLog(@"%@", filePath);
-//    //创建文件管理器
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    [fileManager fileExistsAtPath:filePath];
-//    if([fileManager fileExistsAtPath:filePath]){
-//        [fileManager removeItemAtPath:filePath error:nil];
-//    }
+    [self test];
+    
+}
 
+#pragma mark - test
+- (void)test {
+    JMImageDownloader *downloader = [JMImageDownloader sharedInstance];
+    NSArray *array = @[@"https://c-ssl.duitang.com/uploads/item/201701/16/20170116105642_a3EXe.jpeg", @"https://c-ssl.duitang.com/uploads/item/201702/04/20170204154039_iYy2k.thumb.700_0.jpeg", @"https://c-ssl.duitang.com/uploads/item/201701/16/20170116105430_GiMYf.thumb.700_0.jpeg", @"https://c-ssl.duitang.com/uploads/item/201802/26/20180226112503_yEWkz.jpeg", @"https://c-ssl.duitang.com/uploads/item/201802/26/20180226112503_kfn4C.thumb.700_0.jpeg"];
+    
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    NSLog(@"Start download..");
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        for (NSString *urlStr in array) {
+            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+            dispatch_group_async(group, queue, ^{
+                NSURL *url = [NSURL URLWithString:urlStr];
+                [downloader downloadImageWithURL:url completion:^(NSData * _Nonnull data, NSURL * _Nonnull filePath, NSError * _Nullable error) {
+                    NSLog(@"File downloaded to: %@", [filePath path]);
+                    dispatch_semaphore_signal(sema);
+                }];
+            });
+            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        }
+        
+        dispatch_group_notify(group, queue, ^{
+            NSLog(@"All downloaded!");
+            NSLog(@"%@", downloader.imageCache.cachePathDic);
+        });
+    });
 }
 
 #pragma mark - Table view data source

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6AAF33D0A2AC6AFEA949BC33 /* libPods-ImageConvenienceDownloader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F6BBF32AF8A168FC97940C /* libPods-ImageConvenienceDownloader.a */; };
 		EA29F5AD22E93810008C9F04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5AC22E93810008C9F04 /* AppDelegate.m */; };
-		EA29F5B022E93810008C9F04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5AF22E93810008C9F04 /* ViewController.m */; };
 		EA29F5B322E93810008C9F04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5B122E93810008C9F04 /* Main.storyboard */; };
 		EA29F5B522E93812008C9F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5B422E93812008C9F04 /* Assets.xcassets */; };
 		EA29F5BB22E93812008C9F04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5BA22E93812008C9F04 /* main.m */; };
@@ -18,6 +17,8 @@
 		EA29F5E222E938CD008C9F04 /* JMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5E022E938CD008C9F04 /* JMNavigationController.m */; };
 		EA29F5E322E938CD008C9F04 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5E122E938CD008C9F04 /* MainTableViewController.m */; };
 		EA29F5E522E93970008C9F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA29F5E422E93970008C9F04 /* LaunchScreen.storyboard */; };
+		EA29F5EA22E93BE0008C9F04 /* JMImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5E922E93BE0008C9F04 /* JMImageDownloader.m */; };
+		EA29F5ED22EA982B008C9F04 /* JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EA29F5EC22EA982B008C9F04 /* JMImageCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +44,6 @@
 		EA29F5A822E93810008C9F04 /* ImageConvenienceDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageConvenienceDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA29F5AB22E93810008C9F04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA29F5AC22E93810008C9F04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EA29F5AE22E93810008C9F04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EA29F5AF22E93810008C9F04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EA29F5B222E93810008C9F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA29F5B422E93812008C9F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA29F5B922E93812008C9F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +60,10 @@
 		EA29F5E122E938CD008C9F04 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		EA29F5E422E93970008C9F04 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA29F5E622E9398D008C9F04 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EA29F5E822E93BE0008C9F04 /* JMImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMImageDownloader.h; sourceTree = "<group>"; };
+		EA29F5E922E93BE0008C9F04 /* JMImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMImageDownloader.m; sourceTree = "<group>"; };
+		EA29F5EB22EA982B008C9F04 /* JMImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMImageCache.h; sourceTree = "<group>"; };
+		EA29F5EC22EA982B008C9F04 /* JMImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMImageCache.m; sourceTree = "<group>"; };
 		EC2456EECA2436D7F82DB1FE /* Pods-ImageConvenienceDownloader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageConvenienceDownloader.release.xcconfig"; path = "Target Support Files/Pods-ImageConvenienceDownloader/Pods-ImageConvenienceDownloader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +113,7 @@
 		EA29F59F22E93810008C9F04 = {
 			isa = PBXGroup;
 			children = (
+				EA29F5E722E93BB2008C9F04 /* Util */,
 				EA29F5DD22E938CD008C9F04 /* Base */,
 				EA29F5AA22E93810008C9F04 /* ImageConvenienceDownloader */,
 				EA29F5C322E93812008C9F04 /* ImageConvenienceDownloaderTests */,
@@ -135,8 +139,6 @@
 			children = (
 				EA29F5AB22E93810008C9F04 /* AppDelegate.h */,
 				EA29F5AC22E93810008C9F04 /* AppDelegate.m */,
-				EA29F5AE22E93810008C9F04 /* ViewController.h */,
-				EA29F5AF22E93810008C9F04 /* ViewController.m */,
 				EA29F5B122E93810008C9F04 /* Main.storyboard */,
 				EA29F5B422E93812008C9F04 /* Assets.xcassets */,
 				EA29F5E422E93970008C9F04 /* LaunchScreen.storyboard */,
@@ -174,6 +176,17 @@
 				EA29F5E122E938CD008C9F04 /* MainTableViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		EA29F5E722E93BB2008C9F04 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EA29F5E822E93BE0008C9F04 /* JMImageDownloader.h */,
+				EA29F5E922E93BE0008C9F04 /* JMImageDownloader.m */,
+				EA29F5EB22EA982B008C9F04 /* JMImageCache.h */,
+				EA29F5EC22EA982B008C9F04 /* JMImageCache.m */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,10 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA29F5B022E93810008C9F04 /* ViewController.m in Sources */,
 				EA29F5BB22E93812008C9F04 /* main.m in Sources */,
 				EA29F5E222E938CD008C9F04 /* JMNavigationController.m in Sources */,
 				EA29F5E322E938CD008C9F04 /* MainTableViewController.m in Sources */,
+				EA29F5ED22EA982B008C9F04 /* JMImageCache.m in Sources */,
+				EA29F5EA22E93BE0008C9F04 /* JMImageDownloader.m in Sources */,
 				EA29F5AD22E93810008C9F04 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

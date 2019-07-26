@@ -25,4 +25,6 @@ alpha:(a)]
 // AFNetworking
 #import <AFNetworking.h>
 
+#import "JMImageDownloader.h"
+
 #endif /* PrefixHeader_pch */
