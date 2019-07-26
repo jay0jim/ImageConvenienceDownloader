@@ -84,7 +84,7 @@ static NSString *dicFileName = @"pathDic.plist";
     dispatch_async(self.ioQueue, ^{
         NSArray *pathComponents = [path pathComponents];
         NSString *storePath = [NSString stringWithFormat:@"%@/%@", pathComponents[pathComponents.count-2], pathComponents[pathComponents.count-1]];
-        NSLog(@"%@", storePath);
+//        NSLog(@"%@", storePath);
         [self.cachePathDic setObject:storePath forKey:key];
         NSString *dicPath = [self.homeDir stringByAppendingPathComponent:dicFileName];
         [self.cachePathDic writeToFile:dicPath atomically:YES];

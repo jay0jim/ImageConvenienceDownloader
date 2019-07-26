@@ -54,7 +54,7 @@
         
         dispatch_group_notify(group, queue, ^{
             NSLog(@"All downloaded!");
-            NSLog(@"%@", downloader.imageCache.cachePathDic);
+//            NSLog(@"%@", downloader.imageCache.cachePathDic);
         });
     });
 }
