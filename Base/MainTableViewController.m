@@ -77,6 +77,14 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 2) {
+        [[JMImageCache defaultCache] removeAllCache];
+    }
+    
+    if (indexPath.row == 1) {
+        [[JMImageCache defaultCache] removeCacheWithKeys:@[@"https://c-ssl.duitang.com/uploads/item/201701/16/20170116105642_a3EXe.jpeg"]];
+    }
+}
 
 @end

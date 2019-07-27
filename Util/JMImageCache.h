@@ -44,6 +44,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)existCacheWithKey:(NSString *_Nonnull)key;
 
+/**
+ 删除所有缓存，在其他线程的串行队列中执行，耗时操作
+ */
+- (void)removeAllCache;
+
+/**
+ 删除指定组中指定keys的文件，在其他线程的串行队列中执行，耗时操作
+
+ @param keys 待删除文件的keys（一般为url string）
+ */
+- (void)removeCacheWithKeys:(NSArray *_Nonnull)keys;
+
 @end
 
 NS_ASSUME_NONNULL_END

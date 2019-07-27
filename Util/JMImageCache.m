@@ -17,6 +17,8 @@ static NSString *dicFileName = @"pathDic.plist";
 
 @property (strong, nonatomic) dispatch_queue_t ioQueue;
 
+@property (strong, nonatomic) NSMutableDictionary *storageDic;
+
 @end
 
 @implementation JMImageCache
@@ -33,6 +35,10 @@ static NSString *dicFileName = @"pathDic.plist";
 - (instancetype)init {
     if (self = [super init]) {
         self.storageGroup = @"default";
+        // 储存组的名称
+        self.storageDic = [[NSMutableDictionary alloc] initWithCapacity:10];
+        [self.storageDic setObject:self.storageGroup forKey:self.storageGroup];
+        
         //获取沙盒路径
         self.homeDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0];
 //        NSLog(@"%@", homeDir);
@@ -64,6 +70,7 @@ static NSString *dicFileName = @"pathDic.plist";
 - (void)setStorageGroup:(NSString *)storageGroup {
     _storageGroup = storageGroup;
     self.storageDir = [self.homeDir stringByAppendingPathComponent:storageGroup];
+    [self.storageDic setObject:self.storageGroup forKey:self.storageGroup];
     
     // 创建文件夹
     NSFileManager *fm = [NSFileManager defaultManager];
@@ -110,6 +117,52 @@ static NSString *dicFileName = @"pathDic.plist";
     BOOL e = [[NSFileManager defaultManager] fileExistsAtPath:pathStr];
     return e;
     
+}
+
+#pragma mark - Removing
+- (void)removeAllCache {
+    NSArray *keys = [self.storageDic allKeys];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    for (NSString *key in keys) {
+        NSString *path = [self.homeDir stringByAppendingPathComponent:key];
+        dispatch_sync(self.ioQueue, ^{
+            if ([fm fileExistsAtPath:path]) {
+                [fm removeItemAtPath:path error:nil];
+                [self.storageDic removeObjectForKey:key];
+            }
+        });
+    }
+    
+    // 删除地址字典
+    NSString *dicPath = [self.homeDir stringByAppendingPathComponent:dicFileName];
+    if ([fm fileExistsAtPath:dicPath]) {
+        [fm removeItemAtPath:dicPath error:nil];
+        [self.cachePathDic removeAllObjects];
+    }
+}
+
+- (void)removeCacheWithKeys:(NSArray *)keys {
+
+    NSFileManager *fm = [NSFileManager defaultManager];
+
+    for (NSString *key in keys) {
+        dispatch_sync(self.ioQueue, ^{
+            NSString *path = [self.cachePathDic objectForKey:key];
+            if (path != nil) {
+                NSString *fullPath = [self.homeDir stringByAppendingPathComponent:path];
+                if ([fm fileExistsAtPath:fullPath]) {
+                    [fm removeItemAtPath:fullPath error:nil];
+                    
+                    [self.cachePathDic removeObjectForKey:key];
+                    NSString *dicPath = [self.homeDir stringByAppendingPathComponent:dicFileName];
+                    [self.cachePathDic writeToFile:dicPath atomically:YES];
+                }
+            } else {
+                NSLog(@"No such file!");
+            }
+        });
+    } // for
 }
 
 @end
