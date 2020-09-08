@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^DownloadCompletion)(NSData *data, NSURL *filePath, NSError *_Nullable error);
+typedef void(^DownloadCompletion)(NSData *_Nullable data, NSURL *_Nullable filePath, NSError *_Nullable error);
 
 @interface JMImageDownloader : NSObject
 
@@ -29,6 +29,9 @@ typedef void(^DownloadCompletion)(NSData *data, NSURL *filePath, NSError *_Nulla
 - (void)downloadImageWithURL:(NSURL *)url
                ForceDownload:(BOOL) forceDownload
                   completion:(DownloadCompletion)completionHandler;
+
+- (void)suspendTaskWithURL:(NSURL *)url;
+- (void)resumeTaskWithURL:(NSURL *)url;
 
 @end
 

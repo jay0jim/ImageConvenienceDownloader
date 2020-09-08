@@ -7,11 +7,14 @@
 //
 
 #import "JMImageDownloader.h"
+#import <pthread.h>
 
-@interface JMImageDownloader ()
+@interface JMImageDownloader () {
+    AFURLSessionManager *m_manager;
+    pthread_mutex_t     m_mutex;
+}
 
-@property (strong, nonatomic) dispatch_queue_t processingQueue;
-@property (strong, nonatomic) NSMutableDictionary *processingDic;
+@property (strong, nonatomic) NSMutableDictionary *downloadTasks;
 
 @end
 
@@ -30,8 +33,13 @@
     if (self = [super init]) {
         self.imageCache = [JMImageCache defaultCache];
         
-        self.processingQueue = dispatch_queue_create("ProcessingQueue", DISPATCH_QUEUE_SERIAL);
-        self.processingDic = [[NSMutableDictionary alloc] initWithCapacity:10];
+        self.downloadTasks = @{}.mutableCopy;
+        
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        m_manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+        
+        // 初始化互斥锁
+        pthread_mutex_init(&m_mutex, NULL);
     }
     return self;
 }
@@ -52,18 +60,18 @@
     // 2、若不存在则使用AFN下载图片，并缓存到cache中
     // ps. 如果forceDownload为真，则跳过查找cache，并删除cache中对应的内容（若存在），再重新进行下载
     
-    // 把检测步骤放到串行队列中执行
-    __block BOOL shouldProcess = NO;
-    dispatch_sync(self.processingQueue, ^{
-        NSString *urlStr = [url absoluteString];
-        if ([self.processingDic objectForKey:urlStr] == nil) {
-            [self.processingDic setObject:url forKey:urlStr];
-            shouldProcess = YES;
-        } else {
-            NSLog(@"URL Processing...");
-            shouldProcess = NO;
-        }
-    });
+    // 0、先检查url是否有在下载，如果有直接返回
+    BOOL shouldProcess = NO;
+    NSString *urlStr = [url absoluteString];
+    
+    pthread_mutex_lock(&m_mutex);
+    if ([self.downloadTasks objectForKey:urlStr] == nil) {
+        shouldProcess = YES;
+    } else {
+        NSLog(@"URL is Processing...");
+        shouldProcess = NO;
+    }
+    pthread_mutex_unlock(&m_mutex);
     
     if (shouldProcess) {
         if (!forceDownload) {
@@ -82,38 +90,45 @@
             } // if cache
         }
         
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-        
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        
-        NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-            
+        NSURLSessionDownloadTask *downloadTask = [m_manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
             NSURL *fileURL = [self.imageCache createFullStoragePathWithFileName:[response suggestedFilename]];
-            //        NSLog(@"desBlock -- %@", fileURL);
-            
             return fileURL;
             
         } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-            
             // 任务完成后，将url从dic中去除
-            dispatch_sync(self.processingQueue, ^{
-                [self.processingDic removeObjectForKey:[url absoluteString]];
-            });
+            [self.downloadTasks removeObjectForKey:[url absoluteString]];
             
-            if (error == nil) {
-                [self.imageCache saveImagePath:filePath withKey:[url absoluteString]];
-                
-                if (completionHandler) {
+            if (completionHandler) {
+                if (error) {
+                    completionHandler(nil, nil, error);
+                } else {
+                    [self.imageCache saveImagePath:filePath withKey:[url absoluteString]];
                     NSData *data = [NSData dataWithContentsOfURL:filePath];
-                    completionHandler(data, filePath, error);
-                }
-            }
-            
+                    completionHandler(data, filePath, nil);
+                }// else
+            }// if completion
             
         }];
+        [self.downloadTasks setObject:downloadTask forKey:urlStr];
         [downloadTask resume];
     } // if should process
+}
+
+- (void)suspendTaskWithURL:(NSURL *)url {
+    NSString *urlStr = [url absoluteString];
+    NSURLSessionDownloadTask *downloadTask = [self.downloadTasks objectForKey:urlStr];
+    if (downloadTask) {
+        [downloadTask suspend];
+    }
+}
+
+- (void)resumeTaskWithURL:(NSURL *)url {
+    NSString *urlStr = [url absoluteString];
+    NSURLSessionDownloadTask *downloadTask = [self.downloadTasks objectForKey:urlStr];
+    if (downloadTask) {
+        [downloadTask resume];
+    }
 }
 
 @end
